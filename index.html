@@ -240,7 +240,7 @@
 <li>Figure 8: AI Capex Loop, Oracle, and Sector Rotation</li>
 </ul>
 <hr>
-<h1 id="part-i-how-to-think">Part I: How To Think</h1>
+<h1 id="part-i-how-to-think" class="part-title">Part I: How To Think</h1>
 <h2 id="1-the-map-is-not-the-market">1. The Map Is Not the Market</h2>
 <p>The first lesson is humility. A market is not a spreadsheet, a chart, a model, or a news feed. Those are maps. The market is the live interaction of balance sheets, incentives, policy constraints, positioning, emotions, dealer flows, economic data, and time.</p>
 <p>A model becomes dangerous when the practitioner forgets that it is a compression of reality. The purpose of a model is not to remove uncertainty. The purpose of a model is to make uncertainty legible enough that decisions can be compared, sized, and updated.</p>
@@ -272,11 +272,7 @@
 <li>Expression: how should the view be traded or avoided?</li>
 </ol>
 <p>If a thesis lacks mechanism, it is a story. If it lacks regime, it is too general. If it lacks positioning, it ignores flows. If it lacks expression, it is not yet a decision.</p>
-<pre class="mermaid">flowchart LR
-  A[&quot;Mechanism: why should this relationship exist?&quot;] --&gt; B[&quot;Regime: when does it matter?&quot;]
-  B --&gt; C[&quot;Positioning: who is exposed?&quot;]
-  C --&gt; D[&quot;Expression: what is the cleanest trade or portfolio action?&quot;]
-  D --&gt; E[&quot;Risk: where is invalidation?&quot;]</pre>
+<figure class="diagram-figure"><figcaption>Process Map</figcaption><div class="edge-diagram" role="img" aria-label="Process map"><div class="diagram-edge"><div class="diagram-node">Mechanism: why should this relationship exist?</div><div class="diagram-arrow" aria-hidden="true">→</div><div class="diagram-node">Regime: when does it matter?</div></div><div class="diagram-edge"><div class="diagram-node">Regime: when does it matter?</div><div class="diagram-arrow" aria-hidden="true">→</div><div class="diagram-node">Positioning: who is exposed?</div></div><div class="diagram-edge"><div class="diagram-node">Positioning: who is exposed?</div><div class="diagram-arrow" aria-hidden="true">→</div><div class="diagram-node">Expression: what is the cleanest trade or portfolio action?</div></div><div class="diagram-edge"><div class="diagram-node">Expression: what is the cleanest trade or portfolio action?</div><div class="diagram-arrow" aria-hidden="true">→</div><div class="diagram-node">Risk: where is invalidation?</div></div></div></figure>
 <h3 id="worked-example-lower-rates-are-not-always-bullish">Worked Example: Lower Rates Are Not Always Bullish</h3>
 <p>The naive claim is &quot;lower rates are bullish for equities.&quot; The framework asks why rates are falling.</p>
 <p>If rates fall because inflation expectations fall while growth remains stable, discount rates decline and equities may benefit. If rates fall because growth is collapsing and credit risk is rising, lower rates may be bearish because earnings and balance sheets are deteriorating faster than discount rates are helping.</p>
@@ -327,7 +323,7 @@
 <h3 id="exercise-3">Exercise</h3>
 <p>For any active market view, create a two-column table. Left column: evidence supporting the view. Right column: evidence that would falsify it. If the right column is empty, you do not have a thesis. You have attachment.</p>
 <hr>
-<h1 id="part-ii-the-macro-engine">Part II: The Macro Engine</h1>
+<h1 id="part-ii-the-macro-engine" class="part-title">Part II: The Macro Engine</h1>
 <h2 id="4-regime-first-asset-second">4. Regime First, Asset Second</h2>
 <p>Assets do not have fixed personalities. Bonds can be safe havens in one regime and sources of loss in another. Bitcoin can trade like a liquidity asset, a speculative technology asset, or a macro hedge depending on the cycle. Equities can rise on lower rates if growth is stable, or fall on lower rates if the rate decline signals recession.</p>
 <p>The core lesson is regime alignment. The practitioner should ask: what macro state makes this asset&#x27;s payoff attractive?</p>
@@ -341,14 +337,20 @@
 </ul>
 <p>This grid is not enough by itself, but it organizes first-order asset behavior.</p>
 <p>In disinflationary expansion, equities and credit often benefit. In reflation, commodities, cyclicals, and inflation-linked assets may perform. In recessionary disinflation, duration can work if inflation is contained and central banks can cut. In stagflation, policy trade-offs become harder and correlations can break.</p>
-<pre class="mermaid">quadrantChart
-  title Growth and Inflation Regime Grid
-  x-axis Growth Down --&gt; Growth Up
-  y-axis Inflation Down --&gt; Inflation Up
-  quadrant-1 Reflation / Overheating
-  quadrant-2 Stagflation
-  quadrant-3 Recessionary Disinflation
-  quadrant-4 Disinflationary Expansion</pre>
+<figure class="diagram-figure">
+<figcaption>Growth and Inflation Regime Grid</figcaption>
+<div class="quadrant-diagram" role="img" aria-label="Growth and Inflation Regime Grid">
+  <div class="y-axis top">Inflation Up</div>
+  <div class="quadrant-grid">
+    <div class="quad q2">Stagflation</div>
+    <div class="quad q1">Reflation / Overheating</div>
+    <div class="quad q3">Recessionary Disinflation</div>
+    <div class="quad q4">Disinflationary Expansion</div>
+  </div>
+  <div class="x-axis"><span>Growth Down</span><span>Growth Up</span></div>
+  <div class="y-axis bottom">Inflation Down</div>
+</div>
+</figure>
 <h3 id="regime-is-dynamic">Regime Is Dynamic</h3>
 <p>Regimes are not labels to memorize. They are transitions to monitor. Inflection points matter more than static descriptions. The market moves when participants are forced to update.</p>
 <p>Regime change often shows up first in:</p>
@@ -368,14 +370,14 @@
 <h2 id="5-the-price-of-money">5. The Price of Money</h2>
 <p>Interest rates are the price of money across time. They shape discount rates, credit creation, currency values, housing affordability, equity multiples, bank balance sheets, and risk appetite.</p>
 <p>The rate work spans bonds, yield curves, real rates, rate cuts, r-star, SOFR, bond futures spreads, and the transmission from rates into equities. The recurring idea is that rates are not just another asset class. Rates are the skeleton of the financial system.</p>
-<figure class="chart-figure"><img src="assets/figures/real_rates_vs_sp500.png" alt="Figure 1: 10-year TIPS real yield versus S&amp;P 500 ETF proxy normalized to 100" loading="lazy"><figcaption>Figure 1: 10-year TIPS real yield versus S&amp;P 500 ETF proxy normalized to 100</figcaption></figure>
+<figure class="chart-figure"><img src="assets/figures/real_rates_vs_sp500.png" alt="Figure 1: 10-year TIPS real yield versus S&amp;P 500 ETF proxy normalized to 100"><figcaption>Figure 1: 10-year TIPS real yield versus S&amp;P 500 ETF proxy normalized to 100</figcaption></figure>
 <h3 id="nominal-rates-and-real-rates">Nominal Rates and Real Rates</h3>
 <p>A nominal rate is the stated interest rate. A real rate adjusts for inflation expectations. If nominal rates are high but inflation expectations are also high, real financing conditions may be less restrictive than the nominal number suggests. If nominal rates are stable while inflation expectations rise, real rates fall. That can be a liquidity impulse even without a central-bank cut.</p>
 <p>This is central to the melt-up framework. It depends heavily on real rates approaching or crossing into negative territory. The point is not simply that &quot;cuts are bullish.&quot; The sharper point is that the gap between nominal rates and inflation expectations can ease financial conditions before policy officially moves.</p>
 <h3 id="the-yield-curve">The Yield Curve</h3>
 <p>The curve expresses the price of money across maturities. A front-end move can reflect central-bank expectations. A long-end move can reflect growth, inflation risk, supply, term premium, and global capital flows. Curve shape matters because it tells us where the market thinks pressure will appear.</p>
 <p>Curve thinking helps analyze recession risk, credit risk, policy timing, and trade construction. A steepening curve is not automatically bullish or bearish. A bull steepener driven by expected cuts into recession is different from a bear steepener driven by inflation risk and fiscal supply.</p>
-<figure class="chart-figure"><img src="assets/figures/yield_curve_10y_2y.png" alt="Figure 2: 10-year Treasury yield minus 2-year Treasury yield with recession shading" loading="lazy"><figcaption>Figure 2: 10-year Treasury yield minus 2-year Treasury yield with recession shading</figcaption></figure>
+<figure class="chart-figure"><img src="assets/figures/yield_curve_10y_2y.png" alt="Figure 2: 10-year Treasury yield minus 2-year Treasury yield with recession shading"><figcaption>Figure 2: 10-year Treasury yield minus 2-year Treasury yield with recession shading</figcaption></figure>
 <h3 id="the-rate-complex">The Rate Complex</h3>
 <p>There is no single interest rate. Fed funds and SOFR price the policy path. The 2-year sits close to expected central-bank action. The 5-year is the hinge between policy and term premium. The 10-year and 30-year transmit duration, mortgage, pension, fiscal-supply, and global-capital-flow pressure. A serious rate view reads them as one system.</p>
 <p>The clean signal is not merely whether rates rise or fall. It is whether equities, credit, housing, REITs, financials, industrials, and small caps absorb the rate move. If long-end rates rise and the rate-sensitive parts of the market do not break, the market is telling you growth and liquidity are stronger than the rate shock.</p>
@@ -388,7 +390,7 @@
 <h2 id="6-inflation-labor-growth-and-the-real-rate-channel">6. Inflation, Labor, Growth, and the Real Rate Channel</h2>
 <p>Inflation, labor, and growth form the core policy triangle. Central banks respond to this triangle, and markets respond to central banks responding to it.</p>
 <p>Economic data should not be read in isolation. A strong labor report means something different when inflation is falling than when inflation is accelerating. Weak growth means something different when policy has room to ease than when inflation prevents easing.</p>
-<figure class="chart-figure"><img src="assets/figures/inflation_vs_fed_funds.png" alt="Figure 6: CPI year-over-year inflation versus effective federal funds rate" loading="lazy"><figcaption>Figure 6: CPI year-over-year inflation versus effective federal funds rate</figcaption></figure>
+<figure class="chart-figure"><img src="assets/figures/inflation_vs_fed_funds.png" alt="Figure 6: CPI year-over-year inflation versus effective federal funds rate"><figcaption>Figure 6: CPI year-over-year inflation versus effective federal funds rate</figcaption></figure>
 <h3 id="inflation">Inflation</h3>
 <p>Inflation is not one thing. It can be demand-driven, supply-driven, commodity-driven, wage-driven, shelter-driven, or expectations-driven. Policy has different leverage over each component.</p>
 <p>A supply-side inflation shock can create a dilemma. If central banks hike aggressively into a supply shock, they may crush demand unnecessarily. If they ignore it, inflation expectations may rise. The market must price the policy reaction, not just the inflation print.</p>
@@ -398,15 +400,7 @@
 <p>Growth matters because it determines whether higher rates are restrictive or absorbable. The AI capex and credit-expansion thesis argues that the US economy can withstand higher rates longer than many expect. That is a regime-specific claim: higher rates are dangerous when cash flows cannot absorb them; they are less dangerous when nominal growth, capex, and credit creation remain strong.</p>
 <h3 id="the-real-rate-channel">The Real Rate Channel</h3>
 <p>The real rate channel connects the triangle. If inflation expectations rise while nominal rates do not, real rates fall. Lower real rates stimulate risk-taking, credit creation, housing, equities, and speculative assets. If nominal rates rise faster than inflation expectations, real rates rise and pressure the risk curve.</p>
-<pre class="mermaid">flowchart TD
-  A[&quot;Inflation expectations&quot;] --&gt; C[&quot;Real rates&quot;]
-  B[&quot;Nominal policy rates&quot;] --&gt; C
-  C --&gt; D[&quot;Credit availability&quot;]
-  C --&gt; E[&quot;Discount rates&quot;]
-  C --&gt; F[&quot;Risk appetite&quot;]
-  D --&gt; G[&quot;Credit cycle&quot;]
-  E --&gt; H[&quot;Equity valuation&quot;]
-  F --&gt; I[&quot;Risk curve migration&quot;]</pre>
+<figure class="diagram-figure"><figcaption>Process Map</figcaption><div class="edge-diagram" role="img" aria-label="Process map"><div class="diagram-edge"><div class="diagram-node">Inflation expectations</div><div class="diagram-arrow" aria-hidden="true">→</div><div class="diagram-node">Real rates</div></div><div class="diagram-edge"><div class="diagram-node">Nominal policy rates</div><div class="diagram-arrow" aria-hidden="true">→</div><div class="diagram-node">Real rates</div></div><div class="diagram-edge"><div class="diagram-node">Real rates</div><div class="diagram-arrow" aria-hidden="true">→</div><div class="diagram-node">Credit availability</div></div><div class="diagram-edge"><div class="diagram-node">Real rates</div><div class="diagram-arrow" aria-hidden="true">→</div><div class="diagram-node">Discount rates</div></div><div class="diagram-edge"><div class="diagram-node">Real rates</div><div class="diagram-arrow" aria-hidden="true">→</div><div class="diagram-node">Risk appetite</div></div><div class="diagram-edge"><div class="diagram-node">Credit availability</div><div class="diagram-arrow" aria-hidden="true">→</div><div class="diagram-node">Credit cycle</div></div><div class="diagram-edge"><div class="diagram-node">Discount rates</div><div class="diagram-arrow" aria-hidden="true">→</div><div class="diagram-node">Equity valuation</div></div><div class="diagram-edge"><div class="diagram-node">Risk appetite</div><div class="diagram-arrow" aria-hidden="true">→</div><div class="diagram-node">Risk curve migration</div></div></div></figure>
 <h3 id="exercise-6">Exercise</h3>
 <p>After each major CPI, payrolls, or GDP release, write three lines:</p>
 <ol>
@@ -419,14 +413,8 @@
 <p>The credit cycle is the expansion and contraction of borrowing capacity. It is one of the master cycles behind asset prices.</p>
 <p>When credit expands, capital moves out the risk curve. Companies refinance, investors buy spread product, leverage rises, speculative projects receive funding, and equities can melt up. When credit contracts, refinancing becomes harder, spreads widen, defaults rise, and assets that depended on easy financing reprice.</p>
 <p>The credit cycle melt-up thesis builds on a simple argument: credit issuance, real-rate dynamics, AI capex, and risk-curve behavior can create a powerful upward impulse before the eventual fragility becomes visible.</p>
-<figure class="chart-figure"><img src="assets/figures/high_yield_spreads_vs_sp500.png" alt="Figure 3: High-yield credit ETF and S&amp;P 500 ETF drawdowns below their high-water marks" loading="lazy"><figcaption>Figure 3: High-yield credit ETF and S&amp;P 500 ETF drawdowns below their high-water marks</figcaption></figure>
-<pre class="mermaid">flowchart LR
-  A[&quot;Lower real rates / easier financing&quot;] --&gt; B[&quot;Credit issuance opens&quot;]
-  B --&gt; C[&quot;Balance sheets refinance and extend&quot;]
-  C --&gt; D[&quot;Capital moves out the risk curve&quot;]
-  D --&gt; E[&quot;Equities, small caps, crypto, and cyclicals bid&quot;]
-  E --&gt; F[&quot;Reflexive confidence and more issuance&quot;]
-  F --&gt; B</pre>
+<figure class="chart-figure"><img src="assets/figures/high_yield_spreads_vs_sp500.png" alt="Figure 3: High-yield credit ETF and S&amp;P 500 ETF drawdowns below their high-water marks"><figcaption>Figure 3: High-yield credit ETF and S&amp;P 500 ETF drawdowns below their high-water marks</figcaption></figure>
+<figure class="diagram-figure"><figcaption>Process Map</figcaption><div class="edge-diagram" role="img" aria-label="Process map"><div class="diagram-edge"><div class="diagram-node">Lower real rates / easier financing</div><div class="diagram-arrow" aria-hidden="true">→</div><div class="diagram-node">Credit issuance opens</div></div><div class="diagram-edge"><div class="diagram-node">Credit issuance opens</div><div class="diagram-arrow" aria-hidden="true">→</div><div class="diagram-node">Balance sheets refinance and extend</div></div><div class="diagram-edge"><div class="diagram-node">Balance sheets refinance and extend</div><div class="diagram-arrow" aria-hidden="true">→</div><div class="diagram-node">Capital moves out the risk curve</div></div><div class="diagram-edge"><div class="diagram-node">Capital moves out the risk curve</div><div class="diagram-arrow" aria-hidden="true">→</div><div class="diagram-node">Equities, small caps, crypto, and cyclicals bid</div></div><div class="diagram-edge"><div class="diagram-node">Equities, small caps, crypto, and cyclicals bid</div><div class="diagram-arrow" aria-hidden="true">→</div><div class="diagram-node">Reflexive confidence and more issuance</div></div><div class="diagram-edge"><div class="diagram-node">Reflexive confidence and more issuance</div><div class="diagram-arrow" aria-hidden="true">→</div><div class="diagram-node">Credit issuance opens</div></div></div></figure>
 <h3 id="credit-leads-confirms-and-warns">Credit Leads, Confirms, and Warns</h3>
 <p>Credit can play three roles.</p>
 <p>It leads when credit markets tighten before equities understand the problem.</p>
@@ -461,13 +449,7 @@
 <li>Themes to levered expressions</li>
 </ul>
 <p>The exact path depends on regime, but the concept is stable: liquidity changes the marginal buyer&#x27;s willingness to accept risk.</p>
-<pre class="mermaid">flowchart LR
-  A[&quot;Cash / T-bills&quot;] --&gt; B[&quot;Duration&quot;]
-  B --&gt; C[&quot;Investment-grade credit&quot;]
-  C --&gt; D[&quot;High-yield credit&quot;]
-  D --&gt; E[&quot;Large-cap equities&quot;]
-  E --&gt; F[&quot;Small caps / cyclicals&quot;]
-  F --&gt; G[&quot;Crypto / venture / speculative themes&quot;]</pre>
+<figure class="diagram-figure"><figcaption>Process Map</figcaption><div class="edge-diagram" role="img" aria-label="Process map"><div class="diagram-edge"><div class="diagram-node">Cash / T-bills</div><div class="diagram-arrow" aria-hidden="true">→</div><div class="diagram-node">Duration</div></div><div class="diagram-edge"><div class="diagram-node">Duration</div><div class="diagram-arrow" aria-hidden="true">→</div><div class="diagram-node">Investment-grade credit</div></div><div class="diagram-edge"><div class="diagram-node">Investment-grade credit</div><div class="diagram-arrow" aria-hidden="true">→</div><div class="diagram-node">High-yield credit</div></div><div class="diagram-edge"><div class="diagram-node">High-yield credit</div><div class="diagram-arrow" aria-hidden="true">→</div><div class="diagram-node">Large-cap equities</div></div><div class="diagram-edge"><div class="diagram-node">Large-cap equities</div><div class="diagram-arrow" aria-hidden="true">→</div><div class="diagram-node">Small caps / cyclicals</div></div><div class="diagram-edge"><div class="diagram-node">Small caps / cyclicals</div><div class="diagram-arrow" aria-hidden="true">→</div><div class="diagram-node">Crypto / venture / speculative themes</div></div></div></figure>
 <h3 id="liquidity-is-not-always-visible-first-in-the-same-asset">Liquidity Is Not Always Visible First in the Same Asset</h3>
 <p>Sometimes liquidity appears first in Bitcoin. Sometimes in credit. Sometimes in small caps. Sometimes in call skew. Sometimes in the weakest balance sheets. The market&#x27;s most sensitive asset changes across regimes.</p>
 <p>This is why the process uses a cross-asset lens. The practitioner is not looking for one perfect liquidity proxy. The practitioner is looking for agreement across assets that sit at different points on the risk curve.</p>
@@ -480,7 +462,7 @@
 <h2 id="9-the-dollar-fx-and-cross-border-flows">9. The Dollar, FX, and Cross-Border Flows</h2>
 <p>FX is the balance sheet of the world speaking in relative prices. Currencies reflect growth differentials, rate differentials, current accounts, capital flows, terms of trade, policy credibility, and risk appetite.</p>
 <p>The FX framework spends significant time on the dollar, yen, AUDJPY, GBP, surplus and deficit countries, and cross-border flows. The recurring lesson is that FX cannot be reduced to one variable. It is a relative macro instrument.</p>
-<figure class="chart-figure"><img src="assets/figures/dollar_vs_sp500.png" alt="Figure 4: Broad nominal dollar index versus S&amp;P 500 ETF proxy, both normalized to 100" loading="lazy"><figcaption>Figure 4: Broad nominal dollar index versus S&amp;P 500 ETF proxy, both normalized to 100</figcaption></figure>
+<figure class="chart-figure"><img src="assets/figures/dollar_vs_sp500.png" alt="Figure 4: Broad nominal dollar index versus S&amp;P 500 ETF proxy, both normalized to 100"><figcaption>Figure 4: Broad nominal dollar index versus S&amp;P 500 ETF proxy, both normalized to 100</figcaption></figure>
 <h3 id="surplus-and-deficit-countries">Surplus and Deficit Countries</h3>
 <p>Surplus countries export savings. Deficit countries import capital. This matters because global capital has to settle somewhere. When the US absorbs global savings, the dollar, Treasury market, equity market, and credit system become part of one flow machine.</p>
 <p>The rebalancing problem matters because tariffs, dollar devaluation, supply-chain shifts, and geopolitical fragmentation all change how surplus and deficit countries interact.</p>
@@ -494,11 +476,11 @@
 <h3 id="exercise-9">Exercise</h3>
 <p>For any currency view, write the relative comparison. Do not say &quot;bullish dollar.&quot; Say &quot;bullish dollar against which currency, because which growth differential, rate differential, capital-flow pressure, or risk regime?&quot;</p>
 <hr>
-<h1 id="part-iii-market-transmission">Part III: Market Transmission</h1>
+<h1 id="part-iii-market-transmission" class="part-title">Part III: Market Transmission</h1>
 <h2 id="10-positioning-volatility-and-microstructure">10. Positioning, Volatility, and Microstructure</h2>
 <p>Macro explains why pressure exists. Microstructure explains how pressure becomes price.</p>
 <p>Positioning, gamma, options, intraday liquidity, volatility compression, skew, dealer flows, and the speed of returns are not decorative topics. They are the mechanisms that determine whether a macro view bleeds slowly, grinds higher, or gaps violently.</p>
-<figure class="chart-figure"><img src="assets/figures/vix_stress_regimes.png" alt="Figure 5: CBOE VIX index during stress regimes" loading="lazy"><figcaption>Figure 5: CBOE VIX index during stress regimes</figcaption></figure>
+<figure class="chart-figure"><img src="assets/figures/vix_stress_regimes.png" alt="Figure 5: CBOE VIX index during stress regimes"><figcaption>Figure 5: CBOE VIX index during stress regimes</figcaption></figure>
 <h3 id="positioning">Positioning</h3>
 <p>Positioning asks who owns what, how much leverage they have, and what would force them to change. A bullish macro view can fail tactically if everyone already owns the asset. A bearish view can fail if the short base is crowded and the catalyst triggers covering.</p>
 <p>The key is to separate cause from symptom. A short squeeze can explain the speed of a move, but it may not explain the underlying regime shift. In the credit-cycle melt-up discussion, short covering may amplify the move, while falling real rates, credit issuance, and risk-curve flows explain why the bid exists.</p>
@@ -528,16 +510,9 @@
 <h3 id="ai-capex-as-macro">AI Capex as Macro</h3>
 <p>AI capex is not only a technology story. It is a macro flow story. Large firms spend on chips, data centers, power, networking, real estate, cloud infrastructure, and software. That spending becomes revenue for other firms. It supports credit issuance, capex cycles, and regional investment. It changes sector leadership.</p>
 <p>The AI capex thesis can help explain why the US economy withstands higher rates: capex and cash-flow generation create a bid that offsets some monetary restriction. This is a testable thesis, not a permanent law. It depends on capex continuing, financing staying open, and earnings expectations being validated.</p>
-<figure class="chart-figure"><img src="assets/figures/oracle_ai_sector_rotation.png" alt="Figure 8: Oracle, software, and broad tech adjusted closes normalized to 100" loading="lazy"><figcaption>Figure 8: Oracle, software, and broad tech adjusted closes normalized to 100</figcaption></figure>
+<figure class="chart-figure"><img src="assets/figures/oracle_ai_sector_rotation.png" alt="Figure 8: Oracle, software, and broad tech adjusted closes normalized to 100"><figcaption>Figure 8: Oracle, software, and broad tech adjusted closes normalized to 100</figcaption></figure>
 <p>The chart is not a proprietary attribution model. It is a public-data illustration of the question a macro equity process should ask: when one stock diverges from its sector and broad technology beta, which driver is responsible? The answer may be fundamentals, sector flow, market beta, balance-sheet news, positioning, or a reflexive AI-capex narrative. The job is to decompose the move instead of naming the theme and stopping there.</p>
-<pre class="mermaid">flowchart LR
-  A[&quot;AI demand&quot;] --&gt; B[&quot;Hyperscaler capex&quot;]
-  B --&gt; C[&quot;Chips, power, data centers, networking&quot;]
-  C --&gt; D[&quot;Revenue to infrastructure and software firms&quot;]
-  D --&gt; E[&quot;Credit issuance and equity leadership&quot;]
-  E --&gt; F[&quot;Index concentration and passive flows&quot;]
-  F --&gt; G[&quot;Reflexive capital availability&quot;]
-  G --&gt; B</pre>
+<figure class="diagram-figure"><figcaption>Process Map</figcaption><div class="edge-diagram" role="img" aria-label="Process map"><div class="diagram-edge"><div class="diagram-node">AI demand</div><div class="diagram-arrow" aria-hidden="true">→</div><div class="diagram-node">Hyperscaler capex</div></div><div class="diagram-edge"><div class="diagram-node">Hyperscaler capex</div><div class="diagram-arrow" aria-hidden="true">→</div><div class="diagram-node">Chips, power, data centers, networking</div></div><div class="diagram-edge"><div class="diagram-node">Chips, power, data centers, networking</div><div class="diagram-arrow" aria-hidden="true">→</div><div class="diagram-node">Revenue to infrastructure and software firms</div></div><div class="diagram-edge"><div class="diagram-node">Revenue to infrastructure and software firms</div><div class="diagram-arrow" aria-hidden="true">→</div><div class="diagram-node">Credit issuance and equity leadership</div></div><div class="diagram-edge"><div class="diagram-node">Credit issuance and equity leadership</div><div class="diagram-arrow" aria-hidden="true">→</div><div class="diagram-node">Index concentration and passive flows</div></div><div class="diagram-edge"><div class="diagram-node">Index concentration and passive flows</div><div class="diagram-arrow" aria-hidden="true">→</div><div class="diagram-node">Reflexive capital availability</div></div><div class="diagram-edge"><div class="diagram-node">Reflexive capital availability</div><div class="diagram-arrow" aria-hidden="true">→</div><div class="diagram-node">Hyperscaler capex</div></div></div></figure>
 <h3 id="worked-example-single-stock-macro-attribution">Worked Example: Single-Stock Macro Attribution</h3>
 <p>A stock like Oracle can be analyzed as more than a company-specific story. The practitioner can decompose the move into market beta, sector beta, AI infrastructure flow, data-center financing, credit conditions, and idiosyncratic execution.</p>
 <p>This is the difference between &quot;the stock is up because AI&quot; and a usable attribution map. The second version tells you what data to monitor and what would falsify the trade.</p>
@@ -551,7 +526,7 @@
 <hr>
 <h2 id="12-bitcoin-crypto-and-liquidity-mirrors">12. Bitcoin, Crypto, and Liquidity Mirrors</h2>
 <p>Bitcoin and crypto should not be treated as isolated assets. They can be expressions of liquidity, macro trust, market structure, and risk appetite.</p>
-<figure class="chart-figure"><img src="assets/figures/bitcoin_vs_m2.png" alt="Figure 7: Bitcoin price and M2 money stock, both normalized to 100" loading="lazy"><figcaption>Figure 7: Bitcoin price and M2 money stock, both normalized to 100</figcaption></figure>
+<figure class="chart-figure"><img src="assets/figures/bitcoin_vs_m2.png" alt="Figure 7: Bitcoin price and M2 money stock, both normalized to 100"><figcaption>Figure 7: Bitcoin price and M2 money stock, both normalized to 100</figcaption></figure>
 <p>Bitcoin can behave like:</p>
 <ul>
 <li>A liquidity-sensitive risk asset</li>
@@ -596,7 +571,7 @@
 <h3 id="exercise-13">Exercise</h3>
 <p>For any geopolitical event, create three scenarios: escalation, containment, and reversal. Assign likely impacts to inflation, growth, FX, rates, equities, and commodities. Then identify what the market is already pricing.</p>
 <hr>
-<h1 id="part-iv-decisions">Part IV: Decisions</h1>
+<h1 id="part-iv-decisions" class="part-title">Part IV: Decisions</h1>
 <h2 id="14-trade-construction-and-risk-management">14. Trade Construction and Risk Management</h2>
 <p>A thesis is not a trade. A trade is a specific expression with entry, sizing, invalidation, time horizon, and opportunity cost.</p>
 <p>Trade updates, playbooks, and risk-management notes all emphasize that process matters more than heroic conviction. The best traders are not those who never lose. They are those who lose in planned ways.</p>
@@ -712,15 +687,7 @@
 <p>Evolution agent: combines and refines surviving hypotheses.</p>
 <p>Ranking agent: runs head-to-head comparisons and scores hypotheses on plausibility, novelty, evidence, impact, tradability, and falsifiability.</p>
 <p>Validation agent: checks whether the thesis survives real data, price action, and out-of-sample evidence.</p>
-<pre class="mermaid">flowchart TD
-  H[&quot;Human researcher sets objective&quot;] --&gt; S[&quot;Supervisor agent&quot;]
-  S --&gt; G[&quot;Generation agent: proposes hypotheses&quot;]
-  G --&gt; R[&quot;Reflection agent: attacks weaknesses&quot;]
-  R --&gt; P[&quot;Proximity agent: clusters duplicates&quot;]
-  P --&gt; E[&quot;Evolution agent: recombines survivors&quot;]
-  E --&gt; K[&quot;Ranking agent: ELO-style thesis tournament&quot;]
-  K --&gt; V[&quot;Validation agent: checks data and market outcomes&quot;]
-  V --&gt; H</pre>
+<figure class="diagram-figure"><figcaption>Process Map</figcaption><div class="edge-diagram" role="img" aria-label="Process map"><div class="diagram-edge"><div class="diagram-node">Human researcher sets objective</div><div class="diagram-arrow" aria-hidden="true">→</div><div class="diagram-node">Supervisor agent</div></div><div class="diagram-edge"><div class="diagram-node">Supervisor agent</div><div class="diagram-arrow" aria-hidden="true">→</div><div class="diagram-node">Generation agent: proposes hypotheses</div></div><div class="diagram-edge"><div class="diagram-node">Generation agent: proposes hypotheses</div><div class="diagram-arrow" aria-hidden="true">→</div><div class="diagram-node">Reflection agent: attacks weaknesses</div></div><div class="diagram-edge"><div class="diagram-node">Reflection agent: attacks weaknesses</div><div class="diagram-arrow" aria-hidden="true">→</div><div class="diagram-node">Proximity agent: clusters duplicates</div></div><div class="diagram-edge"><div class="diagram-node">Proximity agent: clusters duplicates</div><div class="diagram-arrow" aria-hidden="true">→</div><div class="diagram-node">Evolution agent: recombines survivors</div></div><div class="diagram-edge"><div class="diagram-node">Evolution agent: recombines survivors</div><div class="diagram-arrow" aria-hidden="true">→</div><div class="diagram-node">Ranking agent: ELO-style thesis tournament</div></div><div class="diagram-edge"><div class="diagram-node">Ranking agent: ELO-style thesis tournament</div><div class="diagram-arrow" aria-hidden="true">→</div><div class="diagram-node">Validation agent: checks data and market outcomes</div></div><div class="diagram-edge"><div class="diagram-node">Validation agent: checks data and market outcomes</div><div class="diagram-arrow" aria-hidden="true">→</div><div class="diagram-node">Human researcher sets objective</div></div></div></figure>
 <h3 id="the-elo-tournament-for-macro-ideas">The ELO Tournament for Macro Ideas</h3>
 <p>The ELO-style idea tournament is a powerful metaphor. Macro theses should compete. &quot;Credit-cycle melt-up&quot; should face &quot;recessionary contraction.&quot; &quot;Dollar devaluation&quot; should face &quot;dollar squeeze.&quot; &quot;AI capex supports growth&quot; should face &quot;AI capex creates concentration risk.&quot;</p>
 <p>Each thesis argues its mechanism. Each attacks the other&#x27;s weak points. A judge scores which thesis better explains the evidence stack. Over repeated rounds, the best thesis rises. But unlike a debate club, the market later grades the result.</p>
@@ -749,7 +716,7 @@
 <h3 id="exercise-15">Exercise</h3>
 <p>Build a &quot;macro co-scientist&quot; prompt stack. Give one agent the job of generating theses, one the job of attacking them, one the job of clustering duplicates, one the job of ranking them, and one the job of converting the winner into a trade checklist.</p>
 <hr>
-<h1 id="part-v-integrated-case-studies">Part V: Integrated Case Studies</h1>
+<h1 id="part-v-integrated-case-studies" class="part-title">Part V: Integrated Case Studies</h1>
 <h2 id="17-case-study-the-credit-cycle-melt-up">17. Case Study: The Credit Cycle Melt-Up</h2>
 <p>The credit cycle melt-up thesis integrates the whole textbook.</p>
 <h3 id="mechanism">Mechanism</h3>
@@ -806,9 +773,9 @@
 <h3 id="lesson-2">Lesson</h3>
 <p>Panic is not automatically opportunity. Panic is opportunity only when price overshoots the likely transmission and the evidence stack shows stabilization.</p>
 <hr>
-<h1 id="part-vi-workbook">Part VI: Workbook</h1>
+<h1 id="part-vi-workbook" class="part-title">Part VI: Workbook</h1>
 <h2 id="19-the-practitioner-workbook">19. The Practitioner Workbook</h2>
-<h3 id="country-to-trade-map">Country-to-Trade Map</h3>
+<h3 id="country-to-trade-map" class="workbook-template">Country-to-Trade Map</h3>
 <p>Country or region:</p>
 <p>Political regime:</p>
 <p>Fiscal stance:</p>
@@ -821,7 +788,7 @@
 <p>Global transmission channel:</p>
 <p>Best market expression:</p>
 <p>Main invalidation:</p>
-<h3 id="information-spectrum-map">Information Spectrum Map</h3>
+<h3 id="information-spectrum-map" class="workbook-template">Information Spectrum Map</h3>
 <p>Current data:</p>
 <p>Consensus forecast:</p>
 <p>Market-implied future:</p>
@@ -830,7 +797,7 @@
 <p>Who was forced to update:</p>
 <p>Price response:</p>
 <p>Lesson:</p>
-<h3 id="weekly-regime-template">Weekly Regime Template</h3>
+<h3 id="weekly-regime-template" class="workbook-template">Weekly Regime Template</h3>
 <p>Date:</p>
 <p>Dominant market sensitivity:</p>
 <p>Growth trend:</p>
@@ -848,7 +815,7 @@
 <p>Bear case:</p>
 <p>Invalidation:</p>
 <p>Best expression:</p>
-<h3 id="thesis-tournament-template">Thesis Tournament Template</h3>
+<h3 id="thesis-tournament-template" class="workbook-template">Thesis Tournament Template</h3>
 <p>Thesis A:</p>
 <p>Mechanism:</p>
 <p>Evidence:</p>
@@ -864,7 +831,7 @@
 <p>Winner:</p>
 <p>Why:</p>
 <p>What would change the ranking:</p>
-<h3 id="trade-review-template">Trade Review Template</h3>
+<h3 id="trade-review-template" class="workbook-template">Trade Review Template</h3>
 <p>Trade:</p>
 <p>Original thesis:</p>
 <p>Actual outcome:</p>
@@ -874,7 +841,7 @@
 <p>Was the timing right?</p>
 <p>What did the market teach?</p>
 <p>What rule should change?</p>
-<h3 id="stacked-edge-scorecard">Stacked Edge Scorecard</h3>
+<h3 id="stacked-edge-scorecard" class="workbook-template">Stacked Edge Scorecard</h3>
 <p>Regime edge:</p>
 <p>Data edge:</p>
 <p>Positioning edge:</p>
@@ -924,9 +891,5 @@
       </footer>
     </main>
   </div>
-  <script type="module">
-    import mermaid from "https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.esm.min.mjs";
-    mermaid.initialize({ startOnLoad: true, theme: "neutral", securityLevel: "strict" });
-  </script>
 </body>
 </html>
