@@ -468,7 +468,45 @@ figcaption {
     line-height: 1.12;
   }
 
-  h1.part-title + h2 {
+  h2.chapter-start {
+    break-before: page;
+    page-break-before: always;
+    margin-top: 0;
+    padding-top: 0;
+    border-top: 0;
+  }
+
+  h2.chapter-start.chapter-compact {
+    break-before: auto;
+    page-break-before: auto;
+    margin-top: 0.34in;
+    padding-top: 0.12in;
+    border-top: 0.6pt solid var(--rule);
+  }
+
+  h1.part-title + h2.chapter-start {
+    break-before: auto;
+    page-break-before: auto;
+    margin-top: 0;
+    padding-top: 0;
+    border-top: 0;
+  }
+
+  h2#table-of-contents {
+    break-before: page;
+    page-break-before: always;
+    margin-top: 0;
+    padding-top: 0;
+    border-top: 0;
+  }
+
+  h2#table-of-contents + ul {
+    margin-bottom: 0;
+  }
+
+  h2#preface-what-this-book-is-trying-to-do {
+    break-before: page;
+    page-break-before: always;
     margin-top: 0;
     padding-top: 0;
     border-top: 0;
