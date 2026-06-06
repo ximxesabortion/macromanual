@@ -261,6 +261,10 @@ code {
   font: 700 1.25rem/1 system-ui, sans-serif;
 }
 
+.workbook-sheet {
+  margin: 30px 0;
+}
+
 .quadrant-diagram {
   display: grid;
   grid-template-columns: 1fr;
@@ -336,7 +340,7 @@ figcaption {
 
 @page {
   size: letter;
-  margin: 0.5in;
+  margin: 0.62in 0.7in 0.72in;
 }
 
 @media (max-width: 980px) {
@@ -366,6 +370,10 @@ figcaption {
     print-color-adjust: exact;
   }
 
+  html {
+    font-size: 11pt;
+  }
+
   body {
     background: white;
   }
@@ -386,28 +394,104 @@ figcaption {
     box-shadow: none;
   }
 
+  .publication-note {
+    margin: 0 0 0.34in;
+    padding: 0.16in 0.18in;
+    border-left-width: 3pt;
+    font-size: 8.8pt;
+    line-height: 1.42;
+  }
+
+  p,
+  li {
+    font-size: 10.6pt;
+    line-height: 1.5;
+    orphans: 3;
+    widows: 3;
+  }
+
+  p {
+    margin: 0 0 0.12in;
+  }
+
+  ul,
+  ol {
+    margin: 0 0 0.16in 0.24in;
+  }
+
+  li {
+    margin: 0.02in 0;
+    padding-left: 0.03in;
+  }
+
+  hr {
+    display: none;
+  }
+
   h1,
   h2,
-  h3 {
+  h3,
+  h4 {
     break-after: avoid;
     page-break-after: avoid;
+    font-family: Inter, ui-sans-serif, system-ui, sans-serif;
+  }
+
+  h1:not(.part-title) {
+    margin: 0 0 0.22in;
+    font-size: 28pt;
+    line-height: 1.03;
   }
 
   h1.part-title {
     break-before: page;
     page-break-before: always;
-    margin-top: 0;
-    padding-top: 0;
+    min-height: 1.28in;
+    display: flex;
+    align-items: flex-end;
+    margin: 0 0 0.28in;
+    padding: 0 0 0.16in;
+    border-bottom: 1.2pt solid var(--accent);
+    color: #111827;
+    font-size: 25pt;
+    line-height: 1.02;
+    font-variant-caps: all-small-caps;
   }
 
   h2 {
     break-before: auto;
     page-break-before: auto;
+    margin: 0.36in 0 0.14in;
+    padding-top: 0.12in;
+    border-top: 0.6pt solid var(--rule);
+    font-size: 17pt;
+    line-height: 1.12;
+  }
+
+  h1.part-title + h2 {
+    margin-top: 0;
+    padding-top: 0;
+    border-top: 0;
+  }
+
+  h3 {
+    margin: 0.24in 0 0.08in;
+    font-size: 11.8pt;
+    line-height: 1.2;
+  }
+
+  h4 {
+    margin: 0.18in 0 0.06in;
+    font-size: 10.4pt;
+  }
+
+  .code-block {
+    margin: 0.16in 0;
+    padding: 0.12in;
+    font-size: 8.6pt;
   }
 
   h3.workbook-template {
-    break-before: page;
-    page-break-before: always;
     margin-top: 0;
     padding-top: 0;
   }
@@ -417,22 +501,57 @@ figcaption {
   }
 
   .chart-figure {
+    margin: 0.24in 0 0.28in;
+    padding: 0.09in;
+    border-color: #ded8ce;
     break-inside: avoid;
     page-break-inside: avoid;
   }
 
   .chart-figure img {
-    max-height: 6in;
+    max-height: 5.85in;
     object-fit: contain;
   }
 
   .diagram-figure {
+    margin: 0.2in 0 0.24in;
+    padding: 0.12in;
+    border-color: #ded8ce;
     break-inside: avoid;
     page-break-inside: avoid;
   }
 
+  .diagram-edge {
+    gap: 0.08in;
+  }
+
+  .edge-diagram {
+    gap: 0.07in;
+  }
+
+  .diagram-node {
+    min-height: 0.34in;
+    padding: 0.07in 0.08in;
+    font-size: 8.6pt;
+    line-height: 1.25;
+  }
+
+  .diagram-arrow {
+    font-size: 12pt;
+  }
+
+  .quadrant-grid {
+    min-height: 2.65in;
+  }
+
+  figcaption {
+    margin-top: 0.07in;
+    font-size: 8.2pt;
+    line-height: 1.35;
+  }
+
   .cover-page {
-    height: 10in;
+    height: 9.66in;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -444,12 +563,43 @@ figcaption {
   .cover-page img {
     width: auto;
     max-width: 100%;
-    max-height: 10in;
+    max-height: 9.52in;
     border: 0;
     box-shadow: none;
   }
 
   .cover-actions {
     display: none;
+  }
+
+  .workbook-sheet {
+    break-before: page;
+    page-break-before: always;
+    margin: 0;
+    min-height: 9.2in;
+    padding: 0.05in 0 0;
+  }
+
+  .workbook-sheet h3 {
+    margin: 0 0 0.18in;
+    padding: 0 0 0.08in;
+    border-bottom: 1pt solid var(--accent);
+    color: #111827;
+    font-size: 17pt;
+  }
+
+  .workbook-sheet p {
+    min-height: 0.38in;
+    margin: 0 0 0.07in;
+    padding: 0 0 0.12in;
+    border-bottom: 0.55pt solid #d9d2c6;
+    color: #30394c;
+    font: 9.8pt/1.22 system-ui, sans-serif;
+  }
+
+  .book-footer {
+    margin-top: 0.36in;
+    padding-top: 0.14in;
+    font-size: 8.4pt;
   }
 }
