@@ -206,6 +206,12 @@ body {
   text-transform: uppercase;
 }
 
+.site-nav a + a {
+  margin-left: 10px;
+  padding-left: 12px;
+  border-left: 1px solid var(--rule);
+}
+
 
 h1, h2, h3, h4 {
   font-family: Inter, ui-sans-serif, system-ui, sans-serif;

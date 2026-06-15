@@ -71,6 +71,12 @@ body {
   text-transform: uppercase;
 }
 
+.site-nav a + a {
+  margin-left: 10px;
+  padding-left: 12px;
+  border-left: 1px solid var(--rule);
+}
+
 .toc a {
   display: block;
   padding: 5px 0;
