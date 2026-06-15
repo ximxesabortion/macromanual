@@ -252,7 +252,7 @@ body {
 
 .mini-cover-copy {
   position: absolute;
-  inset: 22px 22px auto;
+  inset: 22px 22px 22px;
   z-index: 1;
   color: #0a1324;
   text-align: center;
@@ -261,6 +261,7 @@ body {
 .mini-cover-imprint,
 .mini-cover-the,
 .mini-cover-title,
+.mini-cover-classification,
 .mini-cover-subtitle {
   margin: 0;
 }
@@ -288,11 +289,30 @@ body {
   text-transform: uppercase;
 }
 
+.mini-cover-lower {
+  position: absolute;
+  right: 0;
+  bottom: 14px;
+  left: 0;
+  padding: 10px 12px 11px;
+  border: 1px solid rgba(218, 207, 184, 0.86);
+  background: rgba(251, 250, 247, 0.92);
+  box-shadow: 0 12px 28px rgba(10, 19, 36, 0.13);
+}
+
+.mini-cover-classification {
+  color: #101827;
+  font-size: 0.58rem;
+  line-height: 1.25;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+}
+
 .mini-cover-rule {
   display: flex;
   gap: 8px;
   align-items: center;
-  margin: 14px auto 9px;
+  margin: 9px auto 7px;
   color: #b38a3a;
 }
 
@@ -307,17 +327,11 @@ body {
 }
 
 .library-entry .mini-cover-subtitle {
-  display: inline-block;
-  max-width: 100%;
-  padding: 5px 10px 4px;
-  border: 1px solid rgba(179, 138, 58, 0.32);
-  background: rgba(251, 250, 247, 0.9);
-  color: #2f3b51;
-  font: 750 0.52rem/1.2 system-ui, sans-serif;
-  letter-spacing: 0.14em;
-  line-height: 1.2;
-  text-transform: uppercase;
-  box-shadow: 0 6px 18px rgba(10, 19, 36, 0.08);
+  color: #0f172a;
+  font-size: 0.63rem;
+  font-style: italic;
+  line-height: 1.18;
+  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.78);
 }
 
 .library-entry-body {
